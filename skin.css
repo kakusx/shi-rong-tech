@@ -1,17 +1,17 @@
 /*
 *
 * =================================================================
-* SKIN 
+* SKIN
 * =================================================================
 *
-* Populate this file with the CSS of your custom design. 
+* Populate this file with the CSS of your custom design.
 * Include this file into the <head> area of your pages, after the style.css and any other css file.
 *
 */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700,800');
 
-/* 
+/*
 
 # COLORS
 ===================================================================
@@ -159,7 +159,7 @@ footer .text-list-line li b, .light .text-list-line li b, .icon-links-grid a:hov
 
 /*
 
-# CUSTOM 
+# CUSTOM
 ===================================================================
 
 */
@@ -609,8 +609,8 @@ main > section.section-base.section-home-slider {
 body, textarea {
     font-family: 'Montserrat', sans-serif;
     line-height: 30px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 button, .input-text, .input-select, .input-textarea {
@@ -769,7 +769,7 @@ body > nav.menu-subtitle > .container {
 }
 
 .menu-subtitle .menu-brand {
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 @media (min-width: 992px) {
@@ -858,8 +858,8 @@ nav .search-btn {
 }
 
 .menu-cnt > ul > li > a, .lan-menu a {
-    font-weight: 700;
-    font-size: 13px;
+    font-weight: 400;
+    font-size: 16px;
     text-transform: uppercase;
 }
 

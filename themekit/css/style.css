@@ -18,7 +18,7 @@ Table of contents
  - Animations
  - Responsive classes
 
-------------------------------------------------------------------- 
+-------------------------------------------------------------------
 
 # GLOBAL
 ===================================================================
@@ -169,7 +169,7 @@ p + .btn-text, p + table, p + pre, p + img, img + p, p + .row, .row + p, p + .im
     border-radius: 3px;
 }
 
-/* 
+/*
 
 # COLORS
 ===================================================================
@@ -301,7 +301,7 @@ LIGHT COLOR
     opacity: .7;
 }
 
-/* 
+/*
 
 # ICONS
 ===================================================================
@@ -720,6 +720,8 @@ body > nav .menu-brand {
 
 body > nav .menu-brand > a {
     height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 body > nav .menu-brand img {
@@ -1715,7 +1717,7 @@ SIDE - NAVIGATION MENU
         z-index: 99995;
         background-color: #FFFFFF;
         border-right: 1px solid #e7e7e7;
-        box-shadow: 1px 0 2px rgba(0,0,0,0.05);
+        box-shadow: 1px 0 2px rgba(0, 0, 0, 0.05);
     }
 
     .menu-side .menu-brand {
@@ -2051,7 +2053,7 @@ BASE - HEADER
 
 # TYPOGRAPHY
 ===================================================================
- 
+
 -------------------------------------------------------------------
 SPACE
 -------------------------------------------------------------------
@@ -2202,7 +2204,7 @@ QUOTE
 
 # COMPONENTS
 ===================================================================
- 
+
 -------------------------------------------------------------------
 BUTTONS - COMPONENT
 -------------------------------------------------------------------
@@ -2365,6 +2367,7 @@ BUTTONS - COMPONENT
     top: 50%;
     margin-top: -30px;
 }
+
 /*
 -------------------------------------------------------------------
 INPUTS - COMPONENT
@@ -3615,9 +3618,9 @@ img {
     width: auto !important;
 }
 
-/* 
+/*
 
-# CONTAINERS 
+# CONTAINERS
 ===================================================================
 
 -------------------------------------------------------------------
@@ -3991,7 +3994,7 @@ SCROLL BOX - CONTAINER
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .scroll-pos-bottom.scroll-box:after {
@@ -4022,7 +4025,7 @@ COLLAPSE BOX - CONTAINER
     left: 0;
     right: 0;
     width: 100%;
-    background: linear-gradient(to top, rgb(255, 255, 255) 0%,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
     transition: opacity .5s;
 }
 
@@ -4705,7 +4708,6 @@ Medium devices (tablets, less than 992px)
     Layout
     -------------------------------------------------------------------
     */
-
     [class*=col-lg-] + [class*=col-lg-] {
         margin-top: 30px;
     }
@@ -4728,7 +4730,6 @@ Medium devices (tablets, less than 992px)
     Responsive classes
     -------------------------------------------------------------------
     */
-
     .no-margin-md {
         margin: 0 !important;
     }
@@ -4770,7 +4771,6 @@ Medium devices (tablets, less than 992px)
     Components
     -------------------------------------------------------------------
     */
-
     .form-box [class*=col-lg-] + [class*=col-lg-] {
         margin-top: 0 !important;
     }
@@ -4838,7 +4838,6 @@ Medium devices (tablets, less than 992px)
     Containers
     -------------------------------------------------------------------
     */
-
     [data-columns-md='1'] > div {
         grid-template-columns: 1fr;
     }
@@ -4894,7 +4893,6 @@ Medium devices (tablets, less than 992px)
     Sections
     -------------------------------------------------------------------
     */
-
     .section-map > .container {
         max-width: 360px;
     }
@@ -4904,7 +4902,6 @@ Medium devices (tablets, less than 992px)
     Navigation
     -------------------------------------------------------------------
     */
-
     body > nav {
         height: 50px;
     }
@@ -5110,7 +5107,6 @@ Medium devices (tablets, less than 992px)
     Footer
     -------------------------------------------------------------------
     */
-
     i.scroll-top-btn {
         display: block;
     }
@@ -5133,7 +5129,6 @@ Small devices (landscape phones, less than 768px)
     Layout
     -------------------------------------------------------------------
     */
-
     [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
         margin-top: 30px;
     }
@@ -5143,7 +5138,6 @@ Small devices (landscape phones, less than 768px)
     Responsive classes
     -------------------------------------------------------------------
     */
-
     .no-margin-sm {
         margin: 0 !important;
     }
@@ -5177,7 +5171,6 @@ Small devices (landscape phones, less than 768px)
     Components
     -------------------------------------------------------------------
     */
-
     .table-full-sm tr {
         display: block;
     }
@@ -5209,7 +5202,6 @@ Small devices (landscape phones, less than 768px)
     Containers
     -------------------------------------------------------------------
     */
-
     [data-columns-sm='1'] > div {
         grid-template-columns: 1fr;
     }
@@ -5273,7 +5265,6 @@ Small devices (landscape phones, less than 768px)
     Sections
     -------------------------------------------------------------------
     */
-
     .section-block-full > .container > .row > .col:first-child {
         padding: 0 30px;
     }
@@ -5572,3 +5563,78 @@ Inverted responsive classes
         display: none;
     }
 }
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.flex-5 {
+    flex: 5;
+}
+
+.flex-6 {
+    flex: 6;
+}
+
+.flex-7 {
+    flex: 7;
+}
+
+.flex-8 {
+    flex: 8;
+}
+
+.flex-9 {
+    flex: 9;
+}
+
+.flex-10 {
+    flex: 10;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.text-1-2 {
+    transform: scale(1.2);
+}
+
+.fw-normal {
+    font-weight: normal;
+}
+
+
+/*
+-------------------------------------------------------------------
+shi-rong-tech
+-------------------------------------------------------------------
+*/
+
+.index-clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.index-client-item {
+    display: inline-block;
+    background: #fff;
+    border-radius: 6px;
+    height: 60px;
+    margin: 15px;
+    overflow: hidden;
+}
+
