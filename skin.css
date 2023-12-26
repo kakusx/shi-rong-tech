@@ -457,7 +457,7 @@ main > section.section-base.section-home-slider {
 .section-home-slider .slider li > .img-box:before {
     opacity: 1;
     z-index: 1;
-    background: linear-gradient(to right, rgb(30, 48, 57) 0%,rgba(0,0,0,0) 60%);
+    background: linear-gradient(to right, rgb(30, 48, 57) 0%, rgba(0, 0, 0, 0) 60%);
     border-radius: 0;
 }
 
@@ -859,7 +859,7 @@ nav .search-btn {
 
 .menu-cnt > ul > li > a, .lan-menu a {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
@@ -1000,6 +1000,7 @@ nav.menu-fixed.menu-transparent:not(.scroll-menu) {
 .menu-icon-top .menu-cnt > ul > li.dropdown a:after {
     display: none;
 }
+
 /*
 
 # HEADERS
@@ -1099,6 +1100,7 @@ body > header ol.breadcrumb, .header-base .breadcrumb {
 .breadcrumb li:last-child a {
     font-weight: 700;
 }
+
 /*
 
 # FOOTER
@@ -1142,6 +1144,7 @@ footer .col-lg-4:last-child {
     padding: 30px;
     border-radius: 3px;
 }
+
 /*
 
 # COMPONENTS
@@ -2072,6 +2075,7 @@ button.btn-xs, button.btn-sm {
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(10, 70, 103, 0.19);
 }
+
 /*
 
 # CONTAINERS
@@ -2255,7 +2259,7 @@ button.btn-xs, button.btn-sm {
 
 .tab-nav li a {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 18px;
     padding: 5px 15px;
     border: none;
     text-transform: uppercase;

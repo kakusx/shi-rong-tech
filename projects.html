@@ -39,39 +39,8 @@
                 <li>
                     <a href="index.html">首页</a>
                 </li>
-                <li class="dropdown">
-                    <a href="#">解决方案</a>
-                    <ul>
-                        <li class="dropdown-submenu">
-                            <a href="#">About</a>
-                            <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="history.html">History</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a href="#">Services</a>
-                            <ul>
-                                <li><a href="service-1.html">Security audits</a></li>
-                                <li><a href="service-2.html">Artificial intelligence</a></li>
-                                <li><a href="service-3.html">Bots and support</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown-submenu">
-                            <a href="#">Others</a>
-                            <ul>
-                                <li><a href="prices.html">Prices</a></li>
-                                <li><a href="faq.html">Faq</a></li>
-                                <li><a href="events.html">Events</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="career.html">Career</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="elements/components/buttons.html">Elements</a>
-                        </li>
-                    </ul>
+                <li>
+                    <a href="solutions.html">解决方案</a>
                 </li>
                 <li>
                     <a href="projects.html">客户案例</a>
@@ -132,7 +101,10 @@
                                 <a href="#" class="img-box"><img src="media/projects/{{d.img}}" alt=""/></a>
                                 <div class="caption">
                                     <h2>{{d.title}}</h2>
-                                    <div class="extra-field">{{d.client}}</div>
+                                    <div class="d-flex justify-content-between border-top pt-2 mb-2">
+                                        <span>{{d.client}}</span>
+                                        <span>{{cates[d.cat]}}</span>
+                                    </div>
                                     <p class="project-summary">
                                         {{d.summary}}
                                     </p>
@@ -406,7 +378,15 @@
             },
         ];
         projectData.sort((a, b) => a.rank > b.rank ? 1 : -1);
-        $('#projectList').html(template('projectTpl', {data: projectData}));
+        $('#projectList').html(template('projectTpl', {
+            data: projectData, cates: {
+                'cat-1': '金融行业',
+                'cat-2': '保险行业',
+                'cat-3': '汽车行业',
+                'cat-4': '信息安全',
+                'cat-5': '人力资源',
+            }
+        }));
 
     </script>
     <link rel="stylesheet" href="themekit/media/icons/iconsmind/line-icons.min.css">
