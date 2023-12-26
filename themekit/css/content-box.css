@@ -139,6 +139,10 @@ Table of contents
     border-bottom-right-radius: 0;
 }
 
+.cnt-box-top.boxed > .img-box {
+    height: 220px;
+}
+
 /*
 
 # SIDE ICON
@@ -472,6 +476,7 @@ Table of contents
     margin-left: 10px;
     margin-right: 0;
 }
+
 /*
 
 # TEAM
@@ -533,6 +538,7 @@ Table of contents
 .cnt-box-team.align-left .icon-links {
     justify-content: flex-start;
 }
+
 /*
 
 # PRICING TABLE
@@ -610,6 +616,7 @@ Table of contents
 .cnt-pricing-table.align-left {
     text-align: left;
 }
+
 /*
 
 # CALL TO ACTION
@@ -643,6 +650,7 @@ Table of contents
 .cnt-call.align-left > i {
     margin-left: 0;
 }
+
 /*
 
 # RESPONSIVE

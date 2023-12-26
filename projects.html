@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>客户案例 | 释融科技</title>
+    <meta name="description" content="">
+    <script src="themekit/scripts/jquery.min.js"></script>
+    <script src="themekit/scripts/main.js"></script>
+    <script src="themekit/scripts/art-template.js"></script>
+    <link rel="stylesheet" href="themekit/css/bootstrap.min.css">
+    <link rel="stylesheet" href="themekit/css/style.css">
+    <link rel="stylesheet" href="themekit/css/glide.css">
+    <link rel="stylesheet" href="themekit/css/magnific-popup.css">
+    <link rel="stylesheet" href="themekit/css/content-box.css">
+    <link rel="stylesheet" href="themekit/css/contact-form.css">
+    <link rel="stylesheet" href="themekit/css/social.css">
+    <link rel="stylesheet" href="themekit/css/fontawesome/css/fontawesome.all.css">
+    <link rel="stylesheet" href="skin.css">
+    <link rel="icon" href="media/favicon.png">
+</head>
+<body>
+<div id="preloader"></div>
+<!--region 导航菜单-->
+<nav class="menu-classic menu-fixed" data-menu-anima="fade-in">
+    <div class="container">
+        <div class="menu-brand">
+            <a href="#">
+                <img class="logo-default scroll-hide" src="media/shi-rong-logo.png" alt="logo"/>
+                <img class="logo-retina scroll-hide" src="media/shi-rong-logo.png" alt="logo"/>
+                <img class="logo-default scroll-show" src="media/shi-rong-logo.png" alt="logo"/>
+                <img class="logo-retina scroll-show" src="media/shi-rong-logo.png" alt="logo"/>
+            </a>
+        </div>
+        <i class="menu-btn"></i>
+        <div class="menu-cnt">
+            <ul id="main-menu">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#">解决方案</a>
+                    <ul>
+                        <li class="dropdown-submenu">
+                            <a href="#">About</a>
+                            <ul>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="team.html">Team</a></li>
+                                <li><a href="history.html">History</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Services</a>
+                            <ul>
+                                <li><a href="service-1.html">Security audits</a></li>
+                                <li><a href="service-2.html">Artificial intelligence</a></li>
+                                <li><a href="service-3.html">Bots and support</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#">Others</a>
+                            <ul>
+                                <li><a href="prices.html">Prices</a></li>
+                                <li><a href="faq.html">Faq</a></li>
+                                <li><a href="events.html">Events</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="career.html">Career</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="elements/components/buttons.html">Elements</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="projects.html">客户案例</a>
+                </li>
+                <li>
+                    <a href="#">资质认证</a>
+                </li>
+                <li>
+                    <a href="#">技术趋势</a>
+                </li>
+                <li>
+                    <a href="contacts-1.html">关于我们</a>
+                </li>
+                <li>
+                    <a href="contacts-1.html">人才招聘</a>
+                </li>
+                <li>
+                    <a href="contacts-1.html">联系我们</a>
+                </li>
+            </ul>
+            <div class="menu-right">
+                <i class="fa-regular fa-phone"></i>
+                0755-1234 5678
+            </div>
+        </div>
+    </div>
+</nav>
+<!--endregion-->
+<header class="header-image ken-burn-center light" data-parallax="true" data-natural-height="500" data-natural-width="1920" data-bleed="0" data-image-src="media/hd-wide-1.jpg" data-offset="0">
+    <div class="container">
+        <h1>客户案例</h1>
+        <h2>Clients featured projects</h2>
+        <ol class="breadcrumb">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#">客户案例</a></li>
+        </ol>
+    </div>
+</header>
+<main>
+    <section class="section-base section-color">
+        <div class="container" style="padding-top: 50px;">
+            <div class="maso-list" data-columns="3" data-columns-lg="2" data-columns-sm="1">
+                <div class="menu-inner">
+                    <ul>
+                        <li class="active"><a data-filter="maso-item" href="#">全部</a></li>
+                        <li><a data-filter="cat-1" href="#">金融行业</a></li>
+                        <li><a data-filter="cat-2" href="#">保险行业</a></li>
+                        <li><a data-filter="cat-3" href="#">汽车行业</a></li>
+                        <li><a data-filter="cat-4" href="#">信息安全</a></li>
+                        <li><a data-filter="cat-5" href="#">人力资源</a></li>
+                    </ul>
+                </div>
+                <div class="maso-box" id="projectList">
+                    <script type="text/html" id="projectTpl">
+                        {{each data d, i}}
+                        <div class="maso-item {{d.cat}}">
+                            <div class="cnt-box cnt-box-top boxed">
+                                <a href="#" class="img-box"><img src="media/projects/{{d.img}}" alt=""/></a>
+                                <div class="caption">
+                                    <h2>{{d.title}}</h2>
+                                    <div class="extra-field">{{d.client}}</div>
+                                    <p class="project-summary">
+                                        {{d.summary}}
+                                    </p>
+                                    <a href="#" class="btn-text fw-normal text-color-2">案例详情</a>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>释融科技</h3>
+                <p>释融科技是一家以信息技术服务为主导、立足于高科技领域的前沿，专业致力于计算机软件开发及应用的高科技企业。</p>
+                <div class="icon-links icon-social icon-links-grid social-colors">
+                    <a class="facebook"><i class="icon-facebook"></i></a>
+                    <a class="twitter"><i class="icon-twitter"></i></a>
+                    <a class="instagram"><i class="icon-instagram"></i></a>
+                    <a class="pinterest"><i class="icon-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3>常用链接</h3>
+                <ul class="icon-list icon-line">
+                    <li><a href="#">Partners and advertising</a></li>
+                    <li><a href="#">About us and the company</a></li>
+                    <li><a href="#">Services and projects</a></li>
+                    <li><a href="#">Contact us online</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4">
+                <ul class="text-list text-list-line">
+                    <li><b>地址</b>
+                        <hr/>
+                        <p>139 Baker St, E1 7PT, London</p></li>
+                    <li><b>Email</b>
+                        <hr/>
+                        <p>contacts@example.com</p></li>
+                    <li><b>电话</b>
+                        <hr/>
+                        <p>(02) 123 333 444</p></li>
+                    <li><b>微信</b>
+                        <hr/>
+                        <p>15612345678</p></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <div class="container">
+            <span>© 2023 释融科技 </span>
+            <span><a href="#">Contact us</a> | <a href="#">Privacy policy</a></span>
+        </div>
+    </div>
+    <link rel="stylesheet" href="themekit/media/icons/iconsmind/line-icons.min.css">
+    <script src="themekit/scripts/parallax.min.js"></script>
+    <script src="themekit/scripts/glide.min.js"></script>
+    <script src="themekit/scripts/imagesloaded.min.js"></script>
+    <script src="themekit/scripts/progress.js"></script>
+    <script src="themekit/scripts/tab-accordion.js"></script>
+    <script src="themekit/scripts/magnific-popup.min.js"></script>
+    <script src="themekit/scripts/pagination.min.js"></script>
+    <script src="themekit/scripts/contact-form/contact-form.js"></script>
+    <!--        <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
+    <script type="text/javascript">
+        let indexClientData = [
+            'client1.png',
+            'client2.jpg',
+            'client3.png',
+            'client4.jpg',
+            'client5.jpg',
+            'client6.png',
+            'client7.png',
+            'client8.jpg',
+            'client9.jpg',
+            'client10.jpg',
+            'client11.png',
+            'client12.png',
+            'client13.png',
+            'client14.jpg',
+            'client15.png',
+            'client16.png',
+            'client17.png',
+            'client18.png',
+            'client19.jpg',
+            'client20.png',
+            'client21.png',
+            'client22.jpg',
+            'client23.jpg',
+        ];
+        $('#indexClients').html(template('indexClientTpl', {data: indexClientData}));
+    </script>
+    <script type="text/javascript">
+
+        let projectData = [
+            {
+                rank: 17,
+                img: 'project3.jpg',
+                cat: 'cat-1',
+                client: '工商银行',
+                title: '工商银行与东软、释融科技合作打造客户关系管理系统',
+                summary: '客户关系管理（CRM）系统是一种用于管理客户信息、行为、需求、偏好等的软件系统，旨在提高客户满意度、忠诚度和利润率。工商银行与东软、释融科技合作打造了一套全面的客户关系管理系统，为工商银行提供了从客户获取、客户维护、客户发展到客户挽回的全流程管理功能，实现了客户数据的集中存储、分析和应用，支持了客户画像、客户分群、客户价值评估、客户营销策略等智能化服务，提升了工商银行的客户管理水平和市场竞争力。'
+            },
+            {
+                rank: 8,
+                img: 'project4.jpg',
+                cat: 'cat-1',
+                client: '工商银行',
+                title: '工商银行与东软、释融科技合作打造风险控制系统',
+                summary: '风险控制系统是一种用于识别、评估、监测、预警和防范各类风险的软件系统，旨在降低风险损失、提高风险收益、保障风险合规。工商银行与东软、释融科技合作打造了一套全面的风险控制系统，为工商银行提供了从信用风险、市场风险、流动性风险、操作风险到反洗钱风险的全方位管理功能，实现了风险数据的实时采集、处理和展示，支持了风险模型、风险指标、风险报告等智能化服务，提升了工商银行的风险管理水平和风险防范能力。'
+            },
+            {
+                rank: 20,
+                img: 'project3.jpg',
+                cat: 'cat-1',
+                client: '工商银行',
+                title: '工商银行与东软、释融科技合作打造营销系统',
+                summary: '营销系统是一种用于制定、执行、评估和优化营销策略的软件系统，旨在提高营销效率、效果和效益。工商银行与东软、释融科技合作打造了一套全面的营销系统，为工商银行提供了从市场分析、目标设定、方案制定、渠道选择、活动执行到效果评估的全流程管理功能，实现了营销数据的精准获取、分析和应用，支持了营销模式、营销内容、营销效果等智能化服务，提升了工商银行的营销管理水平和市场占有率。'
+            },
+            {
+                rank: 15,
+                img: 'project4.jpg',
+                cat: 'cat-5',
+                client: '工商银行',
+                title: '工商银行与东软、释融科技合作打造核心系统',
+                summary: '核心系统是一种用于支撑银行核心业务的软件系统，旨在提高业务处理能力、业务创新能力、业务协同能力。工商银行与东软、释融科技合作打造了一套全面的核心系统，为工商银行提供了从存款、贷款、结算、理财、信用卡到电子银行的全业务支撑功能，实现了业务数据的高效存储、处理和传输，支持了业务规则、业务流程、业务接口等智能化服务，提升了工商银行的业务管理水平和业务竞争力。'
+            },
+            {
+                rank: 3,
+                img: 'project12.jpg',
+                cat: 'cat-3',
+                client: '广汽本田',
+                title: '广汽本田与释融科技携手打造智能的企业资源管理系统',
+                summary: '企业资源管理（ERP）系统是一种用于集成和管理企业的各项资源和业务的软件系统，旨在提高企业的效率、效果和效益。广本汽车是中国最大的汽车制造企业之一，为了提升生产质量、优化供应链、管理财务资源、提供客户服务，广本汽车与释融科技携手打造了一套智能的企业资源管理系统。释融科技的专业团队根据广本汽车的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了广本汽车的个性化需求。广本汽车的企业资源管理系统为其提供了从生产计划、物料管理、质量控制、仓储物流、财务核算、客户关系等功能，为广本汽车的业务发展提供了专业的支持，赢得了广本汽车的高度赞誉和信任。'
+            },
+            {
+                rank: 10,
+                img: 'project12.jpg',
+                cat: 'cat-3',
+                client: '广本汽车',
+                title: '广本汽车与释融科技合作打造高效的外呼系统',
+                summary: '外呼系统是一种用于实现电话外呼功能的软件系统，旨在提高外呼效率、效果和效益。广本汽车是中国最大的汽车制造企业之一，为了提高销售业绩、增强客户满意度、挖掘市场潜力，广本汽车与释融科技合作打造了一套高效的外呼系统。释融科技的专业团队采用了最先进的软件开发技术和标准，保证了软件的质量和性能，满足了广本汽车的各项需求和规范。广本汽车的外呼系统为其提供了从外呼计划、外呼任务、外呼执行、外呼结果、外呼报告等功能，为广本汽车的销售业务提供了高效的支持，赢得了广本汽车的高度认可和信赖。'
+            },
+            {
+                rank: 12,
+                img: 'project16(2).jpg',
+                cat: 'cat-3',
+                client: '东风日产',
+                title: '东风日产与释融科技携手打造专业的成本管理系统',
+                summary: '成本管理系统是一种用于管理和控制企业的各项成本的软件系统，旨在降低成本支出、提高成本收益、保障成本合规。东风日产是中国最大的汽车销售企业之一，为了降低销售成本、提高销售利润、保障销售合规，东风日产与释融科技携手打造了一套专业的成本管理系统。释融科技的专业团队根据东风日产的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了东风日产的个性化需求。东风日产的成本管理系统为其提供了从成本核算、成本分析、成本控制、成本预测、成本报告等功能，为东风日产的销售业务提供了专业的支持，赢得了东风日产的高度赞誉和信任。'
+            },
+            {
+                rank: 1,
+                img: 'project16(2).jpg',
+                cat: 'cat-3',
+                client: '东风日产',
+                title: '东风日产与释融科技合作打造全面的营销管理系统',
+                summary: '营销管理系统是一种用于管理和优化企业的各项营销活动的软件系统，旨在提高营销效率、效果和效益。东风日产是中国最大的汽车销售企业之一，为了提高销售业绩、增强客户满意度、挖掘市场潜力，东风日产与释融科技合作打造了一套全面的营销管理系统。释融科技的专业团队采用了最先进的软件开发技术和标准，保证了软件的质量和性能，满足了东风日产的各项需求和规范。东风日产的营销管理系统为其提供了从市场分析、目标设定、方案制定、渠道选择、活动执行、效果评估等功能，为东风日产的销售业务提供了全面的支持，赢得了东风日产的高度认可和信赖。'
+            },
+            {
+                rank: 9,
+                img: 'project11.jpg',
+                cat: 'cat-1',
+                client: '建设银行',
+                title: '释融科技为建设银行打造高效的核心业务处理系统',
+                summary: '核心业务处理系统是一种用于支撑银行核心业务的软件系统，旨在提高业务处理能力、业务创新能力、业务协同能力。建设银行是中国最大的国有商业银行之一，为了提高业务效率、降低运营成本、增强客户体验、保障信息安全，建设银行与释融科技合作开发了一套高效的核心业务处理系统。释融科技的专业团队采用了最新的软件开发技术和标准，保证了软件的质量和性能，满足了建设银行的各项需求和规范。建设银行的核心业务处理系统为其提供了从存款、贷款、结算、理财、信用卡到电子银行的全业务支撑功能，为建设银行的业务发展提供了强有力的支持，赢得了建设银行的高度认可和信赖。'
+            },
+            {
+                rank: 13,
+                img: 'project10.jpg',
+                cat: 'cat-1',
+                client: '人民银行',
+                title: '释融科技为人民银行打造专业的费用控制系统',
+                summary: '费用控制系统是一种用于管理和控制银行的各项费用的软件系统，旨在降低费用支出、提高费用收益、保障费用合规。人民银行是中国的中央银行，为了降低运营费用、提高资金利用率、保障财务合规，人民银行与释融科技合作开发了一套专业的费用控制系统。释融科技的专业团队根据人民银行的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了人民银行的个性化需求。人民银行的费用控制系统为其提供了从费用核算、费用分析、费用控制、费用预测、费用报告等功能，为人民银行的财务管理提供了专业的支持，赢得了人民银行的高度赞誉和信任。'
+            },
+            {
+                rank: 21,
+                img: 'project2(2).jpg',
+                cat: 'cat-1',
+                client: '农业银行',
+                title: '释融科技为农业银行打造智能的客户服务系统',
+                summary: '客户服务系统是一种用于提供客户服务功能的软件系统，旨在提高客户满意度、忠诚度和利润率。农业银行是中国最大的农村金融机构之一，为了提高客户服务水平、增强客户关系、挖掘客户价值，农业银行与释融科技合作开发了一套智能的客户服务系统。释融科技的专业团队采用了最先进的人工智能技术和标准，保证了软件的质量和性能，满足了农业银行的各项需求和规范。农业银行的客户服务系统为其提供了从客户咨询、客户投诉、客户回访、客户满意度调查等功能，为农业银行的客户服务提供了智能的支持，赢得了农业银行的高度认可和信赖。'
+            },
+            {
+                rank: 2,
+                img: 'project14.jpg',
+                cat: 'cat-4',
+                client: '民生银行',
+                title: '释融科技为民生银行打造全面的大数据项目',
+                summary: '大数据项目是一种用于收集、存储、处理、分析和应用海量数据的软件项目，旨在提高数据价值、数据效益、数据安全。民生银行是中国最大的股份制商业银行之一，为了提高数据管理水平、增强数据分析能力、挖掘数据潜力，民生银行与释融科技合作打造了一套全面的大数据项目。释融科技的专业团队采用了最新的大数据技术和标准，保证了项目的质量和性能，满足了民生银行的各项需求和规范。民生银行的大数据项目为其提供了从数据采集、数据存储、数据处理、数据分析、数据应用等功能，为民生银行的数据管理提供了全面的支持，赢得了民生银行的高度认可和信赖。'
+            },
+            {
+                rank: 19,
+                img: 'project15.jpg',
+                cat: 'cat-2',
+                client: '中国人保',
+                title: '中国人保与释融科技合作打造专业的保险营销系统',
+                summary: '保险营销系统是一种用于制定、执行、评估和优化保险营销策略的软件系统，旨在提高保险销售效率、效果和效益。中国人保是中国最大的保险集团之一，为了提高保险市场占有率、增强客户忠诚度、挖掘客户价值，中国人保与释融科技合作打造了一套专业的保险营销系统。释融科技的专业团队根据中国人保的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了中国人保的个性化需求。中国人保的保险营销系统为其提供了从市场分析、目标设定、方案制定、渠道选择、活动执行、效果评估等功能，为中国人保的保险业务提供了专业的支持，赢得了中国人保的高度赞誉和信任。'
+            },
+            {
+                rank: 14,
+                img: 'project1.jpg',
+                cat: 'cat-2',
+                client: '新华保险',
+                title: '新华保险与释融科技携手打造全面的客户关系管理系统',
+                summary: '客户关系管理（CRM）系统是一种用于管理客户信息、行为、需求、偏好等的软件系统，旨在提高客户满意度、忠诚度和利润率。新华保险是中国最大的寿险公司之一，为了提高客户服务水平、增强客户关系、挖掘客户价值，新华保险与释融科技携手打造了一套全面的客户关系管理系统。释融科技的专业团队采用了最新的软件开发技术和标准，保证了软件的质量和性能，满足了新华保险的各项需求和规范。新华保险的客户关系管理系统为其提供了从客户获取、客户维护、客户发展到客户挽回的全流程管理功能，实现了客户数据的集中存储、分析和应用，支持了客户画像、客户分群、客户价值评估、客户营销策略等智能化服务，提升了新华保险的客户管理水平和市场竞争力。'
+            },
+            {
+                rank: 7,
+                img: 'project19.jpg',
+                cat: 'cat-2',
+                client: '农银人寿',
+                title: '农银人寿与释融科技合作打造专业的风险管理系统',
+                summary: '风险管理系统是一种用于识别、评估、监测、预警和防范各类风险的软件系统，旨在降低风险损失、提高风险收益、保障风险合规。农银人寿是中国最大的农村保险机构之一，为了降低保险风险、提高保险利润、保障保险合规，农银人寿与释融科技合作打造了一套专业的风险管理系统。释融科技的专业团队根据农银人寿的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了农银人寿的个性化需求。农银人寿的风险管理系统为其提供了从信用风险、市场风险、流动性风险、操作风险到反洗钱风险的全方位管理功能，实现了风险数据的实时采集、处理和展示，支持了风险模型、风险指标、风险报告等智能化服务，提升了农银人寿的风险管理水平和风险防范能力。'
+            },
+            {
+                rank: 4,
+                img: 'project21.jpg',
+                cat: 'cat-2',
+                client: '中意人寿',
+                title: '中意人寿与释融科技携手打造高效的外呼系统',
+                summary: '外呼系统是一种用于实现电话外呼功能的软件系统，旨在提高外呼效率、效果和效益。中意人寿是中国最大的中外合资寿险公司之一，为了提高销售业绩、增强客户满意度、挖掘市场潜力，中意人寿与释融科技携手打造了一套高效的外呼系统。释融科技的专业团队采用了最先进的软件开发技术和标准，保证了软件的质量和性能，满足了中意人寿的各项需求和规范。中意人寿的外呼系统为其提供了从外呼计划、外呼任务、外呼执行、外呼结果、外呼报告等功能，为中意人寿的销售业务提供了高效的支持，赢得了中意人寿的高度认可和信赖。'
+            },
+            {
+                rank: 6,
+                img: 'project7.jpg',
+                cat: 'cat-3',
+                client: '宝马',
+                title: '宝马与释融科技合作打造智能的企业资源管理系统',
+                summary: '企业资源管理（ERP）系统是一种用于集成和管理企业的各项资源和业务的软件系统，旨在提高企业的效率、效果和效益。宝马是世界知名的汽车制造企业，为了提升生产质量、优化供应链、管理财务资源、提供客户服务，宝马与释融科技合作打造了一套智能的企业资源管理系统。释融科技的专业团队根据宝马的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了宝马的个性化需求。宝马的企业资源管理系统为其提供了从生产计划、物料管理、质量控制、仓储物流、财务核算、客户关系等功能，为宝马的业务发展提供了专业的支持，赢得了宝马的高度赞誉和信任。'
+            },
+            {
+                rank: 5,
+                img: 'project17(2).jpg',
+                cat: 'cat-3',
+                client: '华泛',
+                title: '华泛与释融科技携手打造高效的外呼系统',
+                summary: '外呼系统是一种用于实现电话外呼功能的软件系统，旨在提高外呼效率、效果和效益。华泛是中国最大的电子商务企业之一，为了提高销售业绩、增强客户满意度、挖掘市场潜力，华泛与释融科技携手打造了一套高效的外呼系统。释融科技的专业团队采用了最先进的软件开发技术和标准，保证了软件的质量和性能，满足了华泛的各项需求和规范。华泛的外呼系统为其提供了从外呼计划、外呼任务、外呼执行、外呼结果、外呼报告等功能，为华泛的销售业务提供了高效的支持，赢得了华泛的高度认可和信赖。'
+            },
+            {
+                rank: 15,
+                img: 'project22.jpg',
+                cat: 'cat-3',
+                client: '观安',
+                title: '观安与释融科技合作打造专业的安全服务系统',
+                summary: '安全服务系统是一种用于提供安全服务功能的软件系统，旨在提高安全水平、增强安全防范、保障安全需求。观安是中国最大的安全服务提供商之一，为了提高安全服务质量、增强安全服务效果、保障安全服务合规，观安与释融科技合作打造了一套专业的安全服务系统。释融科技的专业团队根据观安的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了观安的个性化需求。观安的安全服务系统为其提供了从安全咨询、安全评估、安全监测、安全预警、安全应急等功能，为观安的安全服务提供了专业的支持，赢得了观安的高度赞誉和信任。'
+            },
+            {
+                rank: 16,
+                img: 'project20.jpg',
+                cat: 'cat-4',
+                client: '中石化',
+                title: '中石化与释融科技携手打造全面的企业资源管理系统',
+                summary: '企业资源管理（ERP）系统是一种用于集成和管理企业的各项资源和业务的软件系统，旨在提高企业的效率、效果和效益。中石化是中国最大的石油化工企业之一，为了提升生产质量、优化供应链、管理财务资源、提供客户服务，中石化与释融科技携手打造了一套全面的企业资源管理系统。释融科技的专业团队根据中石化的具体需求，为其量身定制了适合的软件解决方案，保证了软件的可靠性和安全性，满足了中石化的个性化需求。中石化的企业资源管理系统为其提供了从生产计划、物料管理、质量控制、仓储物流、财务核算、客户关系等功能，为中石化的业务发展提供了专业的支持，赢得了中石化的高度赞誉和信任。'
+            },
+            {
+                rank: 4,
+                img: 'project6.jpg',
+                cat: 'cat-4',
+                client: '中科院',
+                title: '释融科技与中科院合作为政务行业打造智能的政务软件服务平台',
+                summary: '政务软件服务平台是一种用于提供政务软件服务功能的软件平台，旨在提高政务工作效率、增强政务决策能力、保障政务风险防范。释融科技是一家专业致力于计算机软件开发及应用的高科技企业，为了为客户提供优质的信息技术服务，释融科技与中科院合作为政务行业打造了一套智能的政务软件服务平台。释融科技与中科院的专业团队引用了大模型，为政务行业打造了人工智能多维度系统和风控平台，为政务客户提供了智能识别、智能分析、智能决策、智能监督等功能，提高了政务客户的工作效率、增强了政务客户的决策能力、保障了政务客户的风险防范。释融科技与中科院的政务软件服务平台为政务客户的业务发展提供了智能的支持，赢得了政务客户的高度认可和信赖。'
+            },
+        ];
+        projectData.sort((a, b) => a.rank > b.rank ? 1 : -1);
+        $('#projectList').html(template('projectTpl', {data: projectData}));
+
+    </script>
+    <link rel="stylesheet" href="themekit/media/icons/iconsmind/line-icons.min.css">
+    <script src="themekit/scripts/parallax.min.js"></script>
+    <script src="themekit/scripts/glide.min.js"></script>
+    <script src="themekit/scripts/isotope.min.js"></script>
+    <script src="themekit/scripts/imagesloaded.min.js"></script>
+    <!--    <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
+
+</footer>
+</body>
+</html>

@@ -1467,7 +1467,8 @@ footer .col-lg-4:last-child {
 }
 
 .maso-list .menu-inner li > a {
-    font-size: 14px;
+    font-size: 18px;
+    padding: 0 10px;
 }
 
 .menu-inner-vertical li > a {
@@ -1783,7 +1784,7 @@ footer .col-lg-4:last-child {
 
 .cnt-box .extra-field {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
 }
 

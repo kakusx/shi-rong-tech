@@ -3568,6 +3568,7 @@ IMAGE BOX - COMPONENT
     position: relative;
     border-radius: 3px;
     transition: all .5s;
+    object-fit: cover;
 }
 
 .img-box:hover img {
@@ -5639,3 +5640,9 @@ shi-rong-tech
 }
 
 
+.project-summary {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
