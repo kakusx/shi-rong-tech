@@ -3,7 +3,7 @@
 
 /*
 * ===========================================================
-* PROGRESS BAR - CIRCLE PROGRESS BAR - COUNTER - COUNTDOWN - THEMEKIT
+* PROGRESS BAR - CIRCLE PROGRESS BAR - COUNTER - COUNTDOWN 
 * ===========================================================
 * This script manage the following component: progress bar, circle progress bar, counter and countdown.
 * 

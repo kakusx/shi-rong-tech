@@ -1,6 +1,6 @@
 /*
  * ===========================================================
- * MAIN SCRIPT- THEMEKIT
+ * MAIN SCRIPT
  * ===========================================================
  * This script manage all the js functions and the 3r party plugins.
  *
