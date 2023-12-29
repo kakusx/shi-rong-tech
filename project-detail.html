@@ -184,7 +184,7 @@
     <script type="text/javascript">
         $(function () {
             let id = getUrlParam('id') || 1;
-            if (id > 21) {
+            if (id > projectData.length) {
                 id = 1;
             }
             let data = projectData.filter(d => d['id'] == id)[0];
