@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>客户案例 | 释融科技</title>
+    <title>人才招聘 | 释融科技</title>
     <meta name="description" content="">
     <script src="shirong/scripts/jquery.min.js"></script>
     <script src="shirong/scripts/main.js"></script>
@@ -19,6 +19,17 @@
     <link rel="stylesheet" href="shirong/css/fontawesome/css/fontawesome.all.css">
     <link rel="stylesheet" href="skin.css">
     <link rel="icon" href="media/favicon.png">
+
+    <style type="text/css">
+        .job-name {
+            transition: 0.2s ease-in-out;
+        }
+
+        .job-name:hover {
+            transform: translateX(5px);
+            box-shadow: 0 2px 4px #ccc;
+        }
+    </style>
 </head>
 <body>
 <div id="preloader"></div>
@@ -60,7 +71,7 @@
             </ul>
             <div class="menu-right">
                 <i class="fa-regular fa-phone"></i>
-411-888-09342
+                411-888-09342
             </div>
         </div>
     </div>
@@ -68,53 +79,106 @@
 <!--endregion-->
 <header class="header-image ken-burn-center light" data-parallax="true" data-natural-height="500" data-natural-width="1920" data-bleed="0" data-image-src="media/hd-wide-1.jpg" data-offset="0">
     <div class="container">
-        <h1>客户案例</h1>
-        <h2>Clients featured projects</h2>
+        <h1>资质认证</h1>
+        <h2>Certifications</h2>
         <ol class="breadcrumb">
             <li><a href="index.html">首页</a></li>
-            <li><a href="#">客户案例</a></li>
+            <li><a href="#">资质认证</a></li>
         </ol>
     </div>
 </header>
 <main>
     <section class="section-base section-color">
-        <div class="container" style="padding-top: 50px;">
-            <div class="maso-list" data-columns="3" data-columns-lg="2" data-columns-sm="1">
-                <div class="menu-inner">
-                    <ul>
-                        <li class="active"><a data-filter="maso-item" href="#">全部</a></li>
-                        <li><a data-filter="cat-1" href="#">金融行业</a></li>
-                        <li><a data-filter="cat-2" href="#">保险行业</a></li>
-                        <li><a data-filter="cat-3" href="#">汽车行业</a></li>
-                        <li><a data-filter="cat-4" href="#">信息安全</a></li>
-                        <li><a data-filter="cat-5" href="#">人力资源</a></li>
-                    </ul>
-                </div>
-                <div class="maso-box" id="projectList">
-                    <script type="text/html" id="projectTpl">
-                        {{each data d, i}}
-                        <div class="maso-item {{d.cat}} project-item" data-id="{{d.id}}">
-                            <div class="cnt-box cnt-box-top boxed">
-                                <a href="#" class="img-box"><img src="media/projects/{{d.img}}" alt=""/></a>
-                                <div class="caption">
-                                    <h2>{{d.title}}</h2>
-                                    <div class="d-flex justify-content-between border-top pt-2 mb-2">
-                                        <span>{{d.client}}</span>
-                                        <span>{{cates[d.cat]}}</span>
-                                    </div>
-                                    <p class="project-summary">
-                                        {{d.summary}}
-                                    </p>
-                                    <a href="#" class="btn-text fw-normal text-color-2">案例详情</a>
-                                </div>
-                            </div>
-                        </div>
-                        {{/each}}
+        <div class="container" style="padding-top: 50px;"  data-anima="fade-bottom" data-time="1000">
+            <div class="row">
 
-                    </script>
+                <div class="col-lg-7">
+                    <div class="title">
+                        <h2>国际和国内认证</h2>
+                        <p>International and domestic certifications</p>
+                    </div>
+
+                    <p>
+                        释融科技是一家专业从事软件开发、技术服务、人力资源服务等领域的高新技术企业，拥有多项国际和国内认可的资质证书。
+                    </p>
+                    <p>2020年我们获得了<span class="fw-bold">高新技术企业认证</span> 。高新技术企业是在国家重点支持的高新技术领域内，持续进行研究开发与技术成果转化，形成企业核心自主知识产权，并以此为基础开展生产经营活动。</p>
+                    <p>2021年，我们获得了<span class="fw-bold">ISO9001 计算机软件开发认证证书</span>，展示了我们在软件设计、开发、测试、维护等方面的优秀质量。</p>
+                    <p>2023年，我们通过了<span class="fw-bold"> ISO9001 人力资源服务认证</span>，证明了我们在人力资源服务方面的专业水平和管理能力。</p>
+                    <p>2023年，我们还通过了<span class="fw-bold">IEC27001 信息安全管理体系认证</span>，保证了我们在计算机软件开发方面的安全性和可靠性。</p>
+                    </p>
+                </div>
+                <div class="col-lg-5 pt-lg-5">
+
+                    <img src="media/certs/cert-4-lg.png" alt="">
+                    <div class="text-center mt-4">高新技术企业证书</div>
+                </div>
+
+            </div>
+
+
+            <div class="row my-5">
+                <div class="col-4">
+                    <img src="media/certs/cert-3.jpg" alt="" width="100%">
+
+                    <div class="text-center mt-4">
+                        ISO9001:2015 计算机软件开发
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <img src="media/certs/cert-1.jpg" alt="" width="100%">
+
+                    <div class="text-center mt-4">
+                        ISO9001:2015 人力资源服务
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="media/certs/cert-2.jpg" alt="" width="100%">
+
+                    <div class="text-center mt-4">
+                        IEC27001:2013 信息安全管理体系认证
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="section-base">
+        <div class="container" style="padding-top: 50px;"  data-anima="fade-bottom" data-time="1000">
+            <div class="title">
+                <h2>计算机软件著作权登记证书</h2>
+                <p>Computer software copyright registration certificate</p>
+            </div>
+
+
+            <div class="row my-5">
+                <div class="col-3 mb-4">
+                    <img src="media/certs/cert-5.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3 mb-4">
+                    <img src="media/certs/cert-6.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3 mb-4">
+                    <img src="media/certs/cert-7.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3 mb-4">
+                    <img src="media/certs/cert-8.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3">
+                    <img src="media/certs/cert-9.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3">
+                    <img src="media/certs/cert-10.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3">
+                    <img src="media/certs/cert-11.jpg" alt="" width="100%">
+                </div>
+                <div class="col-3">
+                    <img src="media/certs/cert-12.jpg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+
     </section>
 </main>
 <footer class="light">
@@ -143,7 +207,7 @@
                 <ul class="text-list text-list-line">
                     <li style="height: 55px;"><b>地址</b>
                         <hr/>
-                        <p >辽宁省大连市沙河口区香周<br>路249号三合大厦2007室</p></li>
+                        <p>辽宁省大连市沙河口区香周<br>路249号三合大厦2007室</p></li>
                     <li><b>Email</b>
                         <hr/>
                         <p>HR@shirongtech.cn</p></li>
@@ -174,35 +238,26 @@
     <script src="shirong/scripts/pagination.min.js"></script>
     <script src="shirong/scripts/contact-form/contact-form.js"></script>
     <!--        <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
-
-    <script src="shirong/scripts/project-data.js?v=2"></script>
-    <script type="text/javascript">
-        // projectData.sort((a, b) => a.rank > b.rank ? 1 : -1);
-        // let content = '';
-        // projectData.forEach(p => {
-        //     content += "---------------------------------------------------" + '\n';
-        //     content += p.rank + '\n';
-        //     content += p.title + '\n';
-        //     content += p.summary + '\n';
-        // });
-        // console.log(content);
-        $('#projectList').html(template('projectTpl', {
-            data: projectData, cates: {
-                'cat-1': '金融行业',
-                'cat-2': '保险行业',
-                'cat-3': '汽车行业',
-                'cat-4': '信息安全',
-                'cat-5': '人力资源',
-            }
-        }));
-
-    </script>
+    <script src="shirong/scripts/sticky-kit.min.js"></script>
     <link rel="stylesheet" href="shirong/media/icons/iconsmind/line-icons.min.css">
     <script src="shirong/scripts/parallax.min.js"></script>
     <script src="shirong/scripts/glide.min.js"></script>
     <script src="shirong/scripts/isotope.min.js"></script>
     <script src="shirong/scripts/imagesloaded.min.js"></script>
     <!--    <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            $('.job-name').click(function () {
+                let index = $(this).index() + 1;
+                $("html,body").scrollTop($("#job" + index).offset().top - 130);
+                // $("html,body").animate({scrollTop: $("#job" + index).offset().top + 150}, 1000);
+
+            })
+        });
+    </script>
 
 </footer>
 </body>
