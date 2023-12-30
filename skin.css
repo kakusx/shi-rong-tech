@@ -2104,6 +2104,11 @@ button.btn-xs, button.btn-sm {
     text-transform: uppercase;
 }
 
+.album-box {
+    border-radius: 6px;
+    box-shadow: 0 2px 4px #ddd;
+}
+
 .album-box .caption {
     left: 30px;
     border-left-style: solid;
@@ -2118,12 +2123,17 @@ button.btn-xs, button.btn-sm {
     border-left-width: 8px;
 }
 
+.album-box .img-box {
+    height: 100%;
+}
+
 .album-box .img-box:before {
     display: none;
 }
 
 .album-box img {
-    opacity: .7;
+    opacity: 1;
+    height: 100%;
 }
 
 .album-box:hover .img-box img {
