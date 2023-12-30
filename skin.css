@@ -842,7 +842,7 @@ nav .search-btn {
     opacity: 1;
     top: 0;
     transition: opacity .5s, top .5s;
-    animation: anima-menu-down 2s;
+    animation: anima-menu-down 0.5s;
 }
 
 .menu-fixed.scroll-menu.menu-top-logo {

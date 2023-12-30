@@ -92,23 +92,25 @@
     <section class="section-base section-color">
         <div class="container" style="padding-top: 50px;">
             <div class="row">
-                <div class="col-3 position-sticky top-0 border-end">
+                <div class="col-3 border-end">
+                    <div class="fixed-area" data-offset="75">
 
-                    <a href="#job1" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2"><i class="fa-regular fa-right text-color-2"></i> 项目经理</a>
-                    <a href="#job2" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2"><i class="fa-regular fa-right text-color-2"></i> 软件测试开发工程师</a>
-                    <a href="#job3" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2"><i class="fa-regular fa-right text-color-2"></i> 自动化测试工程师</a>
-                    <a href="#job4" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2"><i class="fa-regular fa-right text-color-2"></i> WPF开发</a>
-                    <a href="#job5" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2"><i class="fa-regular fa-right text-color-2"></i> PHP开发工程师</a>
-                    <a href="#job6" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2"><i class="fa-regular fa-right text-color-2"></i> C#开发</a>
-                    <a href="#job7" class="job-name rounded bg-white text-decoration-none d-block p-2 mb-4"><i class="fa-regular fa-right text-color-2"></i> RPA开发运维</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> 项目经理</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> 软件测试开发工程师</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> 自动化测试工程师</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> WPF开发</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> PHP开发工程师</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> C#开发</a>
+                        <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-4" href="###"><i class="fa-regular fa-right text-color-2"></i> RPA开发运维</a>
 
-                    <div class="bg-white text-decoration-none d-block p-3 py-4 rounded">
-                        <div>
-                            <h5 class="mb-4">简历投递</h5>
-                        </div>
-                        <div>
-                            <i class="fa-regular fa-envelope me-2"></i>
-                            HR@shirongtech.cn
+                        <div class="bg-white text-decoration-none d-block p-3 py-4 rounded">
+                            <div>
+                                <h5 class="mb-4">简历投递</h5>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-envelope me-2"></i>
+                                HR@shirongtech.cn
+                            </div>
                         </div>
                     </div>
 
@@ -352,13 +354,26 @@
     <script src="shirong/scripts/pagination.min.js"></script>
     <script src="shirong/scripts/contact-form/contact-form.js"></script>
     <!--        <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
-
+    <script src="shirong/scripts/sticky-kit.min.js"></script>
     <link rel="stylesheet" href="shirong/media/icons/iconsmind/line-icons.min.css">
     <script src="shirong/scripts/parallax.min.js"></script>
     <script src="shirong/scripts/glide.min.js"></script>
     <script src="shirong/scripts/isotope.min.js"></script>
     <script src="shirong/scripts/imagesloaded.min.js"></script>
     <!--    <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
+
+
+    <script type="text/javascript">
+        $(function () {
+
+            $('.job-name').click(function () {
+                let index = $(this).index() + 1;
+                $("html,body").scrollTop($("#job" + index).offset().top - 130);
+                // $("html,body").animate({scrollTop: $("#job" + index).offset().top + 150}, 1000);
+
+            })
+        });
+    </script>
 
 </footer>
 </body>
