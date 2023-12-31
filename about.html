@@ -9,6 +9,7 @@
     <script src="shirong/scripts/jquery.min.js"></script>
     <script src="shirong/scripts/main.js"></script>
     <script src="shirong/scripts/art-template.js"></script>
+    <script src="shirong/scripts/echarts.5.4.2.min.js"></script>
     <link rel="stylesheet" href="shirong/css/bootstrap.min.css">
     <link rel="stylesheet" href="shirong/css/style.css">
     <link rel="stylesheet" href="shirong/css/glide.css">
@@ -201,7 +202,64 @@
         </div>
     </section>
 
+
     <section class="section-base">
+        <div class="container" data-anima="fade-bottom" data-time="1000" style="padding: 30px 0;">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div id="saleMap" style="height: 450px;"></div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="title">
+                        <h2>分支机构</h2>
+                        <p>Company Branches</p>
+                    </div>
+
+                    <div>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th width="100">总部：</th>
+                                <td>释融科技（大连）有限公司</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">分部：</th>
+                                <td>释融科技（深圳）有限公司</td>
+                            </tr>
+                            <tr>
+                                <td>释融科技（北京）有限公司</td>
+                            </tr>
+                            <tr>
+                                <td>融微科技（深圳）有限公司</td>
+                            </tr>
+                            <tr>
+                                <td>释融科技（南京）有限公司</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="4">办事处：</th>
+                                <td>释融科技广州办事处</td>
+                            </tr>
+                            <tr>
+                                <td>释融科技上海办事处</td>
+                            </tr>
+                            <tr>
+                                <td>释融科技西安办事处</td>
+                            </tr>
+                            <tr>
+                                <td>释融科技沈阳办事处</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section-base section-color">
         <div class="container" data-anima="fade-bottom" data-time="1000" style="padding: 30px 0;">
             <div class="title">
                 <h2>成长历程</h2>
@@ -283,6 +341,175 @@
             <span></span>
         </div>
     </div>
+
+    <script type="text/javascript">
+        let branchNames = ['大连', '深圳', '北京', '南京', '广州', '上海', '西安', '沈阳'];
+        //region drawSaleMap
+        $.fn.drawSaleMap = function (mapData) {
+            if ($(this).length === 0) {
+                return;
+            }
+            let myChart = echarts.init($(this)[0]);
+            myChart.dispose();
+            myChart = echarts.init($(this)[0]);
+
+            var uploadedDataURL = "shirong/scripts/china.geo.json";
+            $.getJSON(uploadedDataURL, function (geoJson) {
+                echarts.registerMap('chinaAll', geoJson);
+
+                var geoCoordMap = {
+
+                    '大连': [121.62, 38.92],
+                    '北京': [116.46, 39.92],
+                    '深圳': [114.585945, 22.547001], // 深圳
+                    '广州': [113.28064, 23.625177],
+                    '南京': [118.78, 32.04],
+                    '西安': [108.95, 34.27],
+                    '沈阳': [123.38, 41.8],
+                    '上海': [121.48, 31.22],
+
+                };
+
+                let colors = [
+                    '#fa3455',
+                    '#e99000',
+                    '#e99000',
+                    '#d98600',
+                    '#a97ed1',
+                    '#a97ed1',
+                    '#a97ed1',
+                    '#a97ed1',
+                ];
+
+                var echartsGradient = function (deg, startColor, endColor) {
+                    // x0, x1, y0, y1
+                    let cols = [];
+                    switch (deg) {
+                        case 0: // 横
+                            cols = [0, 0, 1, 0];
+                            break;
+                        case 90: // 竖
+                            cols = [0, 0, 0, 1];
+                            break;
+                        case 135: // 撇
+                            cols = [1, 0, 0, 1];
+                            break;
+                        case 45: // 捺
+                            cols = [0, 0, 1, 1];
+                            break;
+                    }
+                    return new echarts.graphic.LinearGradient(...cols, [{
+                        offset: 0,
+                        color: startColor
+                    }, {
+                        offset: 1,
+                        color: endColor
+                    }]);
+                };
+
+                var seriesData = [];
+                for (var i = 0; i < mapData.length; i++) {
+                    let index = branchNames.indexOf(mapData[i].name);
+                    var geoCoord = geoCoordMap[mapData[i].name];
+                    if (geoCoord) {
+                        var value = geoCoord.concat(mapData[i].value);
+                        seriesData.push({
+                            name: mapData[i].name,
+                            coord: geoCoordMap[mapData[i].name],
+                            value: value,
+                            srcData: mapData[i],
+                            symbolSize: [mapData[i].value * 3 / 1000, mapData[i].value * 3 / 1000],
+                            itemStyle: {
+                                borderColor: colors[index],
+                                borderWidth: 2,
+                                color: colors[index]+'aa'
+                            }
+                        });
+                    }
+                }
+
+                let option = {
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: function (p) {
+                            let tipMap = {
+                                '大连': '释融科技（大连）有限公司',
+                                '北京': '释融科技（北京）有限公司',
+                                '深圳': '释融科技（深圳）有限公司 <br> 融微科技（深圳）有限公司 ',
+                                '南京': '释融科技（南京）有限公司',
+                                '广州': '释融科技广州办事处',
+                                '西安': '释融科技西安办事处',
+                                '沈阳': '释融科技沈阳办事处',
+                                '上海': '释融科技上海办事处',
+                            }
+                            return `<table><tr style="vertical-align: top"><td>${p.marker}</td><td> ${tipMap[p.name]} </td></tr></table>`;
+                        }
+                    },
+                    geo: {
+                        silent: true,
+                        map: 'chinaAll',
+                        show: true,
+                        zoom: 1.1,
+                        top: '10%',
+                        label: {
+                            normal: {
+                                show: false
+                            },
+                            emphasis: {
+                                show: false
+                            }
+                        },
+                        roam: false,
+                        itemStyle: {
+                            normal: {
+                                areaColor: 'rgba(56,164,255,.1)',
+                                borderColor: '#0097dc',
+                                borderWidth: 2,
+                                shadowColor: 'rgba(56,164,255,.26)',
+                                show: false, // 是否显示对应地名
+                            },
+                            emphasis: {
+                                color: 'transparent', //悬浮背景
+                                textStyle: {
+                                    color: 'transparent'
+                                }
+                            }
+                        }
+                    },
+                    series: [
+                        {
+                            type: 'effectScatter',
+                            coordinateSystem: 'geo',
+                            symbol: 'circle',
+                            symbolSize: [40, 40],
+                            label: {
+                                show: true,
+                                formatter: '{b}',
+                                color: '#fff'
+                            },
+                            data: seriesData,
+                            // data: scatterData2(),
+                            showEffectOn: 'render',
+                            rippleEffect: {
+                                brushType: 'stroke'
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                }
+                            },
+                            hoverAnimation: true,
+                            zlevel: 1
+                        },
+                    ]
+                }
+                myChart.setOption(option);
+            });
+        };
+        //endregion
+    </script>
+
+
     <script type="text/javascript">
         let indexClientData = [
             'client1.png',
@@ -313,6 +540,17 @@
             'client23.jpg',
         ];
         $('#indexClients').html(template('indexClientTpl', {data: indexClientData}));
+
+
+        let areaValues = [13000, 10000, 10000, 10000, 8000, 8000, 8000, 8000, 8000];
+        let mapData = branchNames.map((n, i) => {
+            return {
+                name: n, value: areaValues[i]
+            }
+        });
+        mapData.sort((m1, m2) => m1.value > m2.value ? 1 : -1);
+        console.log(mapData);
+        $('#saleMap').drawSaleMap(mapData);
     </script>
 
     <link rel="stylesheet" href="shirong/media/icons/iconsmind/line-icons.min.css">
