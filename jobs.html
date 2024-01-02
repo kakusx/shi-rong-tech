@@ -92,7 +92,7 @@
     <section class="section-base section-color">
         <div class="container" style="padding-top: 50px;">
             <div class="row">
-                <div class="col-3 border-end">
+                <div class="col-md-3 col-12 border-md-end">
                     <div class="fixed-area" data-offset="75">
 
                         <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> 项目经理</a>
@@ -103,7 +103,7 @@
                         <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-2" href="###"><i class="fa-regular fa-right text-color-2"></i> C#开发</a>
                         <a class="job-name rounded bg-white text-decoration-none d-block p-2 mb-4" href="###"><i class="fa-regular fa-right text-color-2"></i> RPA开发运维</a>
 
-                        <div class="bg-white text-decoration-none d-block p-3 py-4 rounded">
+                        <div class="bg-white text-decoration-none d-block p-3 py-4 rounded mb-4">
                             <div>
                                 <h5 class="mb-4">简历投递</h5>
                             </div>
@@ -115,7 +115,7 @@
                     </div>
 
                 </div>
-                <div class="col-9">
+                <div class="col-md-9 col-12">
                     <div id="job1" class="bg-white shadow-sm p-3 rounded mb-3">
                         <h3>项目经理</h3>
 
@@ -344,7 +344,7 @@
     <script src="shirong/scripts/pagination.min.js"></script>
     <script src="shirong/scripts/contact-form/contact-form.js"></script>
     <!--        <script src="https://themekit.dev/tools/sidebar/sidebar.js" data-setting="execoore"></script>-->
-    <script src="shirong/scripts/sticky-kit.min.js"></script>
+<!--    <script src="shirong/scripts/sticky-kit.min.js"></script>-->
     <link rel="stylesheet" href="shirong/media/icons/iconsmind/line-icons.min.css">
     <script src="shirong/scripts/parallax.min.js"></script>
     <script src="shirong/scripts/glide.min.js"></script>
@@ -356,12 +356,23 @@
     <script type="text/javascript">
         $(function () {
 
-            $('.job-name').click(function () {
-                let index = $(this).index() + 1;
-                $("html,body").scrollTop($("#job" + index).offset().top - 130);
-                // $("html,body").animate({scrollTop: $("#job" + index).offset().top + 150}, 1000);
+            if (document.body.clientWidth < 450) {
+                $('.fixed-area').removeClass('fixed-area');
+                $('.job-name').each(function () {
+                    let index = $(this).index() + 1;
+                    $(this).attr('href', '#job' + index);
+                });
+            } else {
+                document.write(`<script type="text/javascript" src="shirong/scripts/sticky-kit.min.js">\<\/script>`);
 
-            })
+                $('.job-name').click(function () {
+                    let index = $(this).index() + 1;
+                    $("html,body").scrollTop($("#job" + index).offset().top - 130);
+                    // $("html,body").animate({scrollTop: $("#job" + index).offset().top + 150}, 1000);
+                });
+            }
+
+
         });
     </script>
 

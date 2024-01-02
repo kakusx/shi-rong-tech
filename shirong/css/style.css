@@ -5131,7 +5131,7 @@ Small devices (landscape phones, less than 768px)
     -------------------------------------------------------------------
     */
     [class*=col-]:not([class*=col-sm]) + [class*=col-]:not([class*=col-sm]) {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
     }
 
     /*
@@ -5637,6 +5637,13 @@ shi-rong-tech
     height: 66px;
     margin: 15px;
     overflow: hidden;
+}
+
+@media (max-width: 450px) {
+    .index-client-item {
+        height: 40px;
+        margin: 6px;
+    }
 }
 
 
