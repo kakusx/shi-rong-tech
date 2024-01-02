@@ -709,7 +709,7 @@ body > nav > .container {
 
 body > nav .menu-brand {
     float: left;
-    height: 50px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -720,7 +720,7 @@ body > nav .menu-brand {
 
 body > nav .menu-brand > a {
     height: 100%;
-    border-radius: 10px;
+    border-radius: 0;
     overflow: hidden;
 }
 

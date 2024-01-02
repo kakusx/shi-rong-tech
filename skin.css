@@ -785,7 +785,8 @@ body > nav.menu-subtitle > .container {
 }
 
 body > nav .menu-brand, .menu-big-box .menu-right {
-    height: 65px;
+    height: 70px;
+    padding: 4px;
 }
 
 .menu-classic .search-box-menu > i {
