@@ -354,6 +354,11 @@
 
 
     <script type="text/javascript">
+
+        if (document.body.clientWidth > 450) {
+            document.write(`<script type="text/javascript" src="shirong/scripts/sticky-kit.min.js"><\/script>`);
+        }
+
         $(function () {
 
             if (document.body.clientWidth < 450) {
@@ -363,7 +368,6 @@
                     $(this).attr('href', '#job' + index);
                 });
             } else {
-                document.write(`<script type="text/javascript" src="shirong/scripts/sticky-kit.min.js">\<\/script>`);
 
                 $('.job-name').click(function () {
                     let index = $(this).index() + 1;
